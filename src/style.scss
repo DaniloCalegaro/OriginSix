@@ -1,0 +1,49 @@
+//----Reset-----//
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+a{
+  text-decoration: none;
+}
+
+img{
+  width: 100%;
+  height: auto;
+}
+//--------------------//
+
+// ---- Variaveis ----//
+
+//--------------------//
+:root{
+
+}
+
+body {
+  font: 400 1rem 'DM Sans', sans-serif;
+  .container{
+    //width: 100%;
+    margin: 0 1.5rem;
+    }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  header {
+    height: 4.5rem;
+  }
+
+  main {
+    section{
+      h2 {
+        font: 700 1.875rem 'Poppins', sans-serif;
+      }
+
+    }
+  }
+}
