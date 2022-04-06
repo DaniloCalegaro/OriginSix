@@ -84,9 +84,45 @@ header {
         color: var(--base-color);
       }
     }
-
+    
     .menu {
       opacity: 0;
+      visibility: hidden;
+    }
+
+    ul {
+      li {
+        a{
+          transition: color 0.3s;
+          position: relative;
+        }
+
+        a:hover{
+          color: var(--base-color);
+        }
+
+        a::after{
+          content: "";
+          width: 0%;
+          height: 2px;
+          background-color: var(--base-color);
+
+          position: absolute;
+          left: 0;
+          bottom: -1.5rem;
+
+          transition: width 0.3s;
+        }
+        
+        a:hover::after{
+          width: 100%;
+        }
+        
+      }
+    }
+
+    /* toggle menu */
+    .icon-close {
       visibility: hidden;
     }
   }

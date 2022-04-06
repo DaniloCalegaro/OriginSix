@@ -77,6 +77,7 @@ header nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  /* toggle menu */
 }
 
 header nav .logo {
@@ -90,6 +91,36 @@ header nav .logo span {
 
 header nav .menu {
   opacity: 0;
+  visibility: hidden;
+}
+
+header nav ul li a {
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+  position: relative;
+}
+
+header nav ul li a:hover {
+  color: var(--base-color);
+}
+
+header nav ul li a::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background-color: var(--base-color);
+  position: absolute;
+  left: 0;
+  bottom: -1.5rem;
+  -webkit-transition: width 0.3s;
+  transition: width 0.3s;
+}
+
+header nav ul li a:hover::after {
+  width: 100%;
+}
+
+header nav .icon-close {
   visibility: hidden;
 }
 
