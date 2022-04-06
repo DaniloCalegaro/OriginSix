@@ -5,6 +5,10 @@
  box-sizing: border-box;
 }
 
+ul {
+  list-style: none;
+}
+
 a {
   text-decoration: none;
 }
@@ -41,9 +45,20 @@ body {
 }
 
 .container {
-  //width: 100%;
   margin: 0 1.5rem;
   }
+
+.title {
+  font: 700 1.875rem 'Poppins', sans-serif;
+  color: var(--title-color);
+  -webkit-font-smoothing: auto;  
+  margin-bottom: 1rem;
+}
+
+.grid {
+  display: grid;
+  gap: 2rem;
+}
 
 //-----Menu-----
 header {
@@ -61,12 +76,42 @@ header {
     justify-content: space-between;
     align-items: center;
 
-    a {
+    .logo {
       font: 700 1.31rem 'Poppins', sans-serif;
       color: var(--title-color);
       
       span {
         color: var(--base-color);
+      }
+    }
+
+    .menu {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+  nav.show {
+    .menu{
+      opacity: 1;
+      visibility: visible;
+
+      background-color: var(--body-color);
+      height: 100vh;
+      width: 100vw;
+      position: fixed;
+      top: 0;
+      left: 0;
+
+      display: grid;
+      place-content: center;
+    }
+
+    ul {
+      gap: 4rem;
+      
+      li {
+        text-align: center;
       }
     }
   }
@@ -82,16 +127,11 @@ header {
 }
 
 main {
-  margin-top: var(--header-height);
+  margin-top: calc(var(--header-height) + 2rem);
 
   .home{
     overflow: hidden;
 
-    .grid {
-      display: grid;
-      gap: 2rem;
-    }
-    
     .container{
       margin: 0;
       
@@ -120,14 +160,7 @@ main {
        .text{
         margin: 0 1.5rem;
         text-align: center;
-    
-        h2 {
-          font: 700 1.875rem 'Poppins', sans-serif;
-          color: var(--title-color);
-          -webkit-font-smoothing: auto;  
-          margin-bottom: 1rem;
-        }
-    
+
         p {
           margin-bottom: 2rem;
         }

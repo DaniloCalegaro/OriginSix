@@ -5,6 +5,10 @@
           box-sizing: border-box;
 }
 
+ul {
+  list-style: none;
+}
+
 a {
   text-decoration: none;
 }
@@ -39,6 +43,19 @@ body {
   margin: 0 1.5rem;
 }
 
+.title {
+  font: 700 1.875rem 'Poppins', sans-serif;
+  color: var(--title-color);
+  -webkit-font-smoothing: auto;
+  margin-bottom: 1rem;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+  gap: 2rem;
+}
+
 header {
   border-bottom: 1px solid #e3e3e3;
   width: 100%;
@@ -62,13 +79,40 @@ header nav {
           align-items: center;
 }
 
-header nav a {
+header nav .logo {
   font: 700 1.31rem 'Poppins', sans-serif;
   color: var(--title-color);
 }
 
-header nav a span {
+header nav .logo span {
   color: var(--base-color);
+}
+
+header nav .menu {
+  opacity: 0;
+  visibility: hidden;
+}
+
+header nav.show .menu {
+  opacity: 1;
+  visibility: visible;
+  background-color: var(--body-color);
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+}
+
+header nav.show ul {
+  gap: 4rem;
+}
+
+header nav.show ul li {
+  text-align: center;
 }
 
 .section {
@@ -80,17 +124,11 @@ header nav a span {
 }
 
 main {
-  margin-top: var(--header-height);
+  margin-top: calc(var(--header-height) + 2rem);
 }
 
 main .home {
   overflow: hidden;
-}
-
-main .home .grid {
-  display: -ms-grid;
-  display: grid;
-  gap: 2rem;
 }
 
 main .home .container {
@@ -120,13 +158,6 @@ main .home .container .image::before {
 main .home .container .text {
   margin: 0 1.5rem;
   text-align: center;
-}
-
-main .home .container .text h2 {
-  font: 700 1.875rem 'Poppins', sans-serif;
-  color: var(--title-color);
-  -webkit-font-smoothing: auto;
-  margin-bottom: 1rem;
 }
 
 main .home .container .text p {
