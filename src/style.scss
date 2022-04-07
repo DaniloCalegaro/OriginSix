@@ -17,8 +17,8 @@ img {
   width: 100%;
   height: auto;
 }
-//--------------------//
 
+//--------------------//
 
 :root {
   --header-height: 4.5rem;
@@ -39,6 +39,8 @@ img {
   visibility: $visibility;
   opacity: $opacity;
 }
+
+//--------Sets-------------//
 
 body {
   font: 400 1rem 'DM Sans', sans-serif;
@@ -63,9 +65,21 @@ body {
   gap: 2rem;
 }
 
+.section {
+  header {
+    strong{
+      color: var(--base-color);
+    }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 
 //----------------Menu---------------------//
-header {
+.header {
   border-bottom: 1px solid hsla(0, 0%, 89%, 1);
   width: 100%;
   position: fixed;
@@ -91,6 +105,12 @@ header {
     
     .menu {
       @include toggle-visibility(hidden, 0);
+      top: -20rem;
+      transition: 0.2s;
+
+      ul {
+        display: none;
+      }
     }
 
     ul {
@@ -129,6 +149,9 @@ header {
       @include toggle-visibility(hidden, 0);
       position: absolute;
       right: 1.5rem;
+
+      top: -1.5rem;
+      transition: 0.2s;
     }
 
     .toggle {
@@ -155,6 +178,7 @@ header {
 
     ul {
       gap: 4rem;
+      display: grid;
       
       li {
         text-align: center;
@@ -164,8 +188,13 @@ header {
      /* toggle menu */
     .icon-close {
       @include toggle-visibility(visible, 1);
+      top: 1.5rem;
     }
   }
+}
+
+.header.scroll{
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.1);
 }
 
 //---------------------Home---------------------
@@ -285,6 +314,34 @@ main {
         p {
           margin-bottom: 2rem;
         }
+      }
+    }
+  }
+
+  //------- Services-------
+  .services{
+    header {
+      //position: relative;
+      margin-bottom: 4rem;
+    }
+    
+    .card {
+      padding: 3.625rem 2rem;
+      box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
+      border-bottom: 0.25rem solid var(--base-color);
+      border-radius: 0.25rem 0.25rem 0 0;
+      text-align: center;
+
+      i {
+        display: block;
+        margin-bottom: 1.5rem;
+        font-size: 5rem;
+        color: var(--base-color);
+      }
+
+      .title{
+        font-size: 1.5rem;
+        margin-bottom:0.75rem
       }
     }
   }
