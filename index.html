@@ -9,16 +9,17 @@
     <!--Style-->
     <link rel="stylesheet" href="./src/style.css" />
 
-    <!--Fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
     <!--Icones-->
     <link rel="stylesheet" href="./assets/style.css" />
   </head>
+
+  <!--Fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  />
   <body>
     <header>
       <nav class="container">
@@ -32,13 +33,13 @@
             <li><a class="title" href="#contact">Contatos</a></li>
           </ul>
         </div>
-        <div class="icon-menu"></div>
-        <div class="icon-close"></div>
+        <div class="toggle icon-menu"></div>
+        <div class="toggle icon-close"></div>
       </nav>
     </header>
 
     <main>
-      <section class="section home">
+      <section class="section home" id="home">
         <div class="container grid">
           <div class="image">
             <img
@@ -59,13 +60,47 @@
 
       <div class="divider-1"></div>
 
-      <section class="section" id="about">
-        <div class="container grid">Sobre</div>
+      <section class="section about" id="about">
+        <div class="container grid">
+          <div class="image">
+            <img
+              src="https://media.istockphoto.com/photos/close-up-of-unrecognizable-hairdresser-cutting-a-female-customers-picture-id1349298950?b=1&k=20&m=1349298950&s=170667a&w=0&h=e3QqJeNf45Soo04QbHD6njzJH42_Wn8lfTEAe7gCqiM="
+              alt="Cabelo sendo cortado"
+            />
+          </div>
+          <div class="text">
+            <h2 class="title">Sobre nós</h2>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est
+              voluptatibus quos aliquam a dolor necessitatibus nulla dolorum
+              impedit, nihil optio accusamus quam facere molestias, minima hic,
+              consequuntur iusto assumenda? Optio.
+            </p>
+
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
+              ratione voluptatum quasi? Nesciunt cumque illum molestiae modi
+              perspiciatis enim perferendis, vero et atque, veniam quod
+              repellendus odio voluptatem doloremque. Expedita.
+            </p>
+
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+              mollitia doloremque laudantium? Repellat iusto, corporis, fuga
+              suscipit architecto optio enim dolores voluptatibus ab laborum
+              quibusdam voluptas beatae eos praesentium numquam?
+            </p>
+          </div>
+        </div>
       </section>
+
+      <div class="divider-2"></div>
 
       <section class="section" id="services">
         <div class="container grid">Serviços</div>
       </section>
     </main>
+
+    <script src="./js/main.js"></script>
   </body>
 </html>
