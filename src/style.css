@@ -32,6 +32,16 @@ img {
   --body-color: hsl(0 0% 98%);
 }
 
+.box-shadow, main .services .card {
+  -webkit-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
+          box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
+}
+
+.size-margin-icon, main .contact .text .button i, main .contact .text ul li i, main .contact .links ul li i {
+  font-size: 1.5rem;
+  margin-right: 0.625rem;
+}
+
 body {
   font: 400 1rem 'DM Sans', sans-serif;
   color: var(--text-color);
@@ -58,6 +68,27 @@ body {
 
 .section header strong {
   color: var(--base-color);
+}
+
+.button {
+  background-color: var(--base-color);
+  color: var(--text-color-light);
+  height: 3.5rem;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 2rem;
+  border-radius: 0.25rem;
+  font: 500 1rem "DM Sans", sans-serif;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
+}
+
+.button:hover {
+  background: var(--base-color-alt);
 }
 
 html {
@@ -239,27 +270,6 @@ main .home .container .text p {
   margin-bottom: 2rem;
 }
 
-main .home .container .text .button {
-  background-color: var(--base-color);
-  color: var(--text-color-light);
-  height: 3.5rem;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 0 2rem;
-  border-radius: 0.25rem;
-  font: 500 1rem "DM Sans", sans-serif;
-  -webkit-transition: background 0.3s;
-  transition: background 0.3s;
-}
-
-main .home .container .text .button:hover {
-  background: var(--base-color-alt);
-}
-
 main .divider-1 {
   height: 1px;
   background: -webkit-gradient(linear, right top, left top, from(hsla(var(--hue), 36%, 57%, 1)), to(hsla(var(--hue), 65%, 88%, 0.34)));
@@ -313,8 +323,6 @@ main .services header {
 
 main .services .card {
   padding: 3.625rem 2rem;
-  -webkit-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
-          box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
   border-bottom: 0.25rem solid var(--base-color);
   border-radius: 0.25rem 0.25rem 0 0;
   text-align: center;
@@ -330,5 +338,71 @@ main .services .card i {
 main .services .card .title {
   font-size: 1.5rem;
   margin-bottom: 0.75rem;
+}
+
+main .testimonials {
+  background: white;
+}
+
+main .testimonials blockquote {
+  padding: 2rem;
+  border-radius: 0.25rem;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+main .testimonials blockquote p {
+  position: relative;
+  text-indent: 1.7rem;
+  margin-bottom: 1.5rem;
+  color: var(--title-color);
+}
+
+main .testimonials blockquote p span {
+  font: 700 2.5rem serif;
+  position: absolute;
+  top: -0.35rem;
+  left: -1.7rem;
+  color: var(--base-color);
+}
+
+main .testimonials blockquote cite {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-style: normal;
+}
+
+main .testimonials blockquote cite img {
+  width: 2rem;
+  height: 2rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-clip-path: circle();
+          clip-path: circle();
+  margin-right: 0.5rem;
+}
+
+main .testimonials .swiper-pagination-bullet-active {
+  background: var(--base-color);
+}
+
+main .contact .text p {
+  margin-bottom: 2rem;
+}
+
+main .contact .links ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .contact .links ul li i {
+  color: var(--base-color);
 }
 /*# sourceMappingURL=style.css.map */

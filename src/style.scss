@@ -40,6 +40,15 @@ img {
   opacity: $opacity;
 }
 
+.box-shadow{
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
+}
+
+.size-margin-icon {
+  font-size: 1.5rem;
+  margin-right: 0.625rem;
+}
+
 //--------Sets-------------//
 
 body {
@@ -71,6 +80,22 @@ body {
       color: var(--base-color);
     }
   }
+}
+
+.button {
+  background-color: var(--base-color);
+  color: var(--text-color-light);
+  height: 3.5rem;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 2rem;
+  border-radius: 0.25rem;
+  font: 500 1rem "DM Sans", sans-serif;
+  transition: background 0.3s;
+}
+
+.button:hover{
+  background: var(--base-color-alt) ;
 }
 
 html {
@@ -244,22 +269,7 @@ main {
         p {
           margin-bottom: 2rem;
         }
-    
-        .button {
-          background-color: var(--base-color);
-          color: var(--text-color-light);
-          height: 3.5rem;
-          display: inline-flex;
-          align-items: center;
-          padding: 0 2rem;
-          border-radius: 0.25rem;
-          font: 500 1rem "DM Sans", sans-serif;
-          transition: background 0.3s;
-        }
-    
-        .button:hover{
-          background: var(--base-color-alt) ;
-        }
+  
       }
     }
   }
@@ -327,7 +337,7 @@ main {
     
     .card {
       padding: 3.625rem 2rem;
-      box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
+      @extend .box-shadow;
       border-bottom: 0.25rem solid var(--base-color);
       border-radius: 0.25rem 0.25rem 0 0;
       text-align: center;
@@ -344,5 +354,76 @@ main {
         margin-bottom:0.75rem
       }
     }
+  }
+
+  //------- Testimonials-------
+  .testimonials {
+    background: white; 
+    
+    blockquote {
+      padding: 2rem;
+      border-radius: 0.25rem;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      
+      p {
+        position: relative;
+        text-indent: 1.7rem;
+        margin-bottom: 1.5rem;
+        color: var(--title-color);
+
+        span{
+          font: 700 2.5rem serif;
+          position: absolute;
+          top: -0.35rem;
+          left: -1.7rem;
+          color: var(--base-color);
+        }
+      }
+
+      cite {
+        display: flex;
+        align-items: center;
+        font-style: normal;
+
+        img{
+          width: 2rem;
+          height: 2rem;
+          object-fit: cover;
+          clip-path: circle();
+          margin-right: 0.5rem;
+        }
+      }
+    }
+
+    .swiper-pagination-bullet-active {
+      background: var(--base-color);
+    }
+  }
+
+  //------- Testimonials-------
+  .contact {
+    .text {
+      p {
+        margin-bottom: 2rem;
+      }
+
+      .button, ul li{
+        i {
+          @extend .size-margin-icon;
+        }
+      }
+    }
+
+    .links ul li {
+      display: flex;
+      align-items: center;
+
+      i{
+        @extend .size-margin-icon;
+        color: var(--base-color);
+      }
+    }
+
+
   }
 }
