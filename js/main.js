@@ -15,18 +15,6 @@ for (const link of links) {
   })
 }
 
-//--------------
-const header = document.querySelector('.header')
-const navHeight = header.offsetHeight
-
-window.addEventListener('scroll', () => {
-  if (window.scrollY >= navHeight) {
-    header.classList.add('scroll')
-  } else {
-    header.classList.remove('scroll')
-  }
-})
-
 //--------Testimonials carousel slider swiper-------
 const swiper = new Swiper('.swiper', {
   slidesPerView: 1,
@@ -49,8 +37,35 @@ scrollReveal.reveal(
   `#home .image, #home .text,
   #about .image, #about .text,
   #services header, #services .card,
-  #testimonials header, #testimonials .testimonials
-  #contact .text, #contact .links
+  #testimonials header, #testimonials .testimonials,
+  #contact .text, #contact .links,
+  footer .brand, footer .social
   `,
   { interval: 100 }
 )
+
+function changeHeaderWhenScroll() {
+  const header = document.querySelector('.header')
+  const navHeight = header.offsetHeight
+
+  if (window.scrollY >= navHeight) {
+    header.classList.add('scroll')
+  } else {
+    header.classList.remove('scroll')
+  }
+}
+
+function backToTop() {
+  const backToTop = document.querySelector('.back-to-top')
+  if (window.scrollY >= 560) {
+    backToTop.classList.add('show')
+  } else {
+    backToTop.classList.remove('show')
+  }
+}
+
+//------- When Scroll ---------
+window.addEventListener('scroll', () => {
+  changeHeaderWhenScroll()
+  backToTop()
+})

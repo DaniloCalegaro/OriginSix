@@ -405,4 +405,68 @@ main .contact .links ul li {
 main .contact .links ul li i {
   color: var(--base-color);
 }
+
+footer {
+  background: var(--base-color);
+}
+
+footer .logo {
+  font: 700 1.31rem 'Poppins', sans-serif;
+  color: var(--title-color);
+}
+
+footer .logo span {
+  color: var(--body-color);
+}
+
+footer .brand .logo {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+footer .brand p {
+  color: var(--text-color-light);
+  margin-bottom: 0.75rem;
+}
+
+footer .social a {
+  font-size: 1.5rem;
+  color: var(--text-color-light);
+  margin-right: 2rem;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  display: inline-block;
+}
+
+footer .social a:hover {
+  -webkit-transform: translateY(-8px);
+          transform: translateY(-8px);
+}
+
+.back-to-top {
+  background: var(--base-color);
+  color: var(--text-color-light);
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  padding: 0.5rem;
+  -webkit-clip-path: circle();
+          clip-path: circle();
+  font-size: 1.5rem;
+  line-height: 0;
+  z-index: 1;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+}
+
+.back-to-top.show {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
 /*# sourceMappingURL=style.css.map */
