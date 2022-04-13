@@ -159,11 +159,12 @@ html {
           position: relative;
         }
 
-        a:hover{
+        a:hover,
+        a.active {
           color: var(--base-color);
         }
 
-        a::after{
+        a::after {
           content: "";
           width: 0%;
           height: 2px;
@@ -176,8 +177,10 @@ html {
           transition: width 0.3s;
         }
         
-        a:hover::after{
+        a:hover::after,
+        a.active::after{
           width: 100%;
+          
         }
         
       }
