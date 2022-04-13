@@ -30,6 +30,11 @@ img {
   --text-color: hsl(0 0% 46%);
   --text-color-light: hsl(0 0% 98%);
   --body-color: hsl(0 0% 98%);
+  /* fonts */
+  --title-font-size: 1.875rem;
+  --subtitle-font-size: 1rem;
+  --title-font: 'Poppins', sans-serif;
+  --body-font: 'DM Sans', sans-serif;
 }
 
 .box-shadow, main .services .card {
@@ -43,7 +48,7 @@ img {
 }
 
 body {
-  font: 400 1rem 'DM Sans', sans-serif;
+  font: 400 1rem var(--body-font), sans-serif;
   color: var(--text-color);
   background: var(--body-color);
   -webkit-font-smoothing: antialiased;
@@ -54,10 +59,14 @@ body {
 }
 
 .title {
-  font: 700 1.875rem 'Poppins', sans-serif;
+  font: 700 var(--title-font-size) var(--title-font), sans-serif;
   color: var(--title-color);
   -webkit-font-smoothing: auto;
   margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: var(--subtitle-font-size);
 }
 
 .grid {
@@ -82,7 +91,7 @@ body {
           align-items: center;
   padding: 0 2rem;
   border-radius: 0.25rem;
-  font: 500 1rem "DM Sans", sans-serif;
+  font: 500 1rem var(--body-font), sans-serif;
   -webkit-transition: background 0.3s;
   transition: background 0.3s;
 }
@@ -120,7 +129,7 @@ html {
 }
 
 .header nav .logo {
-  font: 700 1.31rem 'Poppins', sans-serif;
+  font: 700 1.31rem var(--title-font), sans-serif;
   color: var(--title-color);
 }
 
@@ -222,15 +231,11 @@ html {
 }
 
 .section {
-  padding: 5rem 0;
+  padding: calc(5rem + var(--header-height)) 0;
 }
 
 .border-radius, main .home .container .image img, main .home .container .image::before, main .about .container .image::before {
   border-radius: 0.25rem;
-}
-
-main {
-  margin-top: calc(var(--header-height) + 2rem);
 }
 
 main .home {
@@ -406,30 +411,31 @@ main .contact .links ul li i {
   color: var(--base-color);
 }
 
-footer {
+footer.section {
   background: var(--base-color);
+  padding: 4rem 0;
 }
 
-footer .logo {
-  font: 700 1.31rem 'Poppins', sans-serif;
+footer.section .logo {
+  font: 700 1.31rem var(--title-font), sans-serif;
   color: var(--title-color);
 }
 
-footer .logo span {
+footer.section .logo span {
   color: var(--body-color);
 }
 
-footer .brand .logo {
+footer.section .brand .logo {
   display: inline-block;
   margin-bottom: 1.5rem;
 }
 
-footer .brand p {
+footer.section .brand p {
   color: var(--text-color-light);
   margin-bottom: 0.75rem;
 }
 
-footer .social a {
+footer.section .social a {
   font-size: 1.5rem;
   color: var(--text-color-light);
   margin-right: 2rem;
@@ -438,7 +444,7 @@ footer .social a {
   display: inline-block;
 }
 
-footer .social a:hover {
+footer.section .social a:hover {
   -webkit-transform: translateY(-8px);
           transform: translateY(-8px);
 }
@@ -469,4 +475,43 @@ footer .social a:hover {
   -webkit-transform: translateY(0);
           transform: translateY(0);
 }
+
+/*========= MEDIA QUERIES =========*/
+/* extra large devices: 1200 > */
+@media (min-width: 1200px) {
+  main {
+    margin-top: calc(var(--header-height) + 2rem);
+  }
+  .section {
+    padding: 10rem 0;
+  }
+  .header nav .menu {
+    visibility: visible;
+    opacity: 1;
+    top: 0;
+  }
+  .header nav .menu ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 2rem;
+  }
+  .header nav .menu ul .title {
+    font: 400 1rem var(--body-font);
+  }
+  .header nav .icon-menu {
+    display: none;
+  }
+}
+
+/* large devices: 1023 > */
+/* large devices: 992 > */
+@media (min-width: 992px) {
+  :root {
+    --title-font-size: 2.25rem;
+    --subtitle-font-size: 1.125rem;
+  }
+}
+
+/* medium devices: 767 > */
 /*# sourceMappingURL=style.css.map */
