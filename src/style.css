@@ -476,12 +476,6 @@ footer.section .social a:hover {
           transform: translateY(0);
 }
 
-<<<<<<< HEAD
-/*=========== MEDIA QUERIES =============*/
-/* extra large devices: 1200 > */
-/* large devices: 1023 > */
-/* large devices: 992 > */
-=======
 /*========= MEDIA QUERIES =========*/
 /* extra large devices: 1200 > */
 @media (min-width: 1200px) {
@@ -508,6 +502,68 @@ footer.section .social a:hover {
   .header nav .icon-menu {
     display: none;
   }
+  .container {
+    max-width: 1120px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  main .home .container {
+    grid-auto-flow: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 0 auto;
+  }
+  main .home .container .image {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  main .home .container .text {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+    max-width: 24rem;
+    text-align: left;
+  }
+  main .home .container .button {
+    height: 3.125rem;
+  }
+  main .about .container {
+    grid-auto-flow: column;
+    margin: 0 auto;
+  }
+  main .services .cards {
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+  }
+  main .contact .container {
+    grid-auto-flow: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main .contact .container .text {
+    max-width: 24rem;
+  }
+  main .section header {
+    max-width: 32rem;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  footer.section {
+    padding: 3.75rem 0;
+  }
+  footer.section .container {
+    grid-auto-flow: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 
 /* large devices: 1023 > */
@@ -519,6 +575,5 @@ footer.section .social a:hover {
   }
 }
 
->>>>>>> f3a802b9b5c0f3dd0684ed5cc3672caf3ed794b2
 /* medium devices: 767 > */
 /*# sourceMappingURL=style.css.map */

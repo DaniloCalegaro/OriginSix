@@ -246,8 +246,6 @@ html {
 }
 
 main {
-  //margin-top: calc(var(--header-height) + 2rem);
-
   .home{
     overflow: hidden;
 
@@ -502,17 +500,6 @@ footer.section {
   transform: translateY(0);
 }
 
-<<<<<<< HEAD
-/*=========== MEDIA QUERIES =============*/
-/* extra large devices: 1200 > */
-/* large devices: 1023 > */
-/* large devices: 992 > */ 
-/* medium devices: 767 > */ 
-
-@media (min-width: 992px) {
-  
-}
-=======
 /*========= MEDIA QUERIES =========*/
 /* extra large devices: 1200 > */
 @media (min-width: 1200px){
@@ -545,7 +532,81 @@ footer.section {
       }
     }
   }
+
+  .container {
+    max-width: 1120px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  main {
+    .home {
+      .container{
+        grid-auto-flow: column;
+        justify-content: space-between;
+        margin: 0 auto;
+
+        .image {
+          order: 1
+        }
+  
+        .text {
+          order: 0;
+          max-width: 24rem;
+          text-align: left;
+        }
+
+        .button {
+          height: 3.125rem;
+        }
+      }
+    }
+
+    .about { 
+      .container {
+        grid-auto-flow: column;
+        margin: 0 auto;
+      }
+    }
+
+    .services {
+      .cards {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+    }
+
+    .contact {
+      .container{
+        grid-auto-flow: column;
+        align-items: center;
+
+        .text {
+          max-width: 24rem;
+        }
+      }
+    }
+
+    .section {
+      header {
+        max-width: 32rem;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+
+  footer.section {
+    padding: 3.75rem 0;
+
+    .container{
+      grid-auto-flow: column;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
 }
+
 /* large devices: 1023 > */
 /* large devices: 992 > */
 @media (min-width: 992px){
@@ -556,4 +617,3 @@ footer.section {
 }
 
 /* medium devices: 767 > */
->>>>>>> f3a802b9b5c0f3dd0684ed5cc3672caf3ed794b2
