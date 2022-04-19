@@ -39,7 +39,7 @@ Nesta página contém muitos a ser apreendido:
 
 ### Desenvolvimento do conhecimento
 
-Foi um desafio muito grande lida com a quantidade e complexidade do código, porém todos foram superados principalmente na implementação das bibliotecas externas onde aprendi que tudo pode ser programado e também reaproveitado.
+Foi um desafio muito grande lidar com a quantidade e complexidade do código, porém todos foram superados, principalmente na implementação das bibliotecas externas onde aprendi que tudo pode ser programado e também reaproveitado.
 
 ### Recursos utilizados
 
