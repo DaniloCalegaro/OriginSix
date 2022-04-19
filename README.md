@@ -20,7 +20,7 @@ Esta página foi criada para praticar os estudos, onde busquei entender e implem
 
 ### A Página
 
-Nesta pagina contem muitos a ser apreendido:
+Nesta página contém muitos a ser apreendido:
 
 - Estruturar o html, css e java 
 - Aplicado a pratica do SASS
